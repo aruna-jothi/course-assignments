@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <title>
+        Check Prime number or not
+
+    </title>
+    <body>
+        <div class = "results">
+            <h2> Enter the Number </h2>
+            <input type = "number" name = "number" id = "number" required>
+        </div>
+        <div id="result">
+            
+        </div>
+        <button type = "button" onclick = "checkForPrime()" > Submit </button>
+        <script>
+            function checkForPrime() {
+            num = document.getElementById("number").value;
+            if(num==""){
+            document.getElementById("result").innerHTML = " Enter a  Number";
+            }
+            else{
+                /*if(num%1==0 && num%num==0)
+                {
+                    document.getElementById("result").innerHTML="Its a prime number";
+
+                }
+                else{
+                    document.getElementById("result").innerHTML="Its not a prime number";
+
+                }*/
+
+
+            }
+            flag=true;
+            for(i=2;i<num;i++){
+                if(num%i==0)
+                {
+                    flag=false;
+                    break;
+                }
+                
+
+
+            }
+            if(flag){
+            document.getElementById("result").innerHTML="Its a prime number";
+        }
+
+            else{
+                    document.getElementById("result").innerHTML="Its not a prime number";
+
+                }
+
+            }
+
+
+        </script>   
+            
+
+        </body>
+</html>
